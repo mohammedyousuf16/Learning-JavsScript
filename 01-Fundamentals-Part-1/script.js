@@ -125,7 +125,6 @@ m tall.
 § Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76
 m tall.
 GOOD LUCK � 
-*/
 
 let markMass = 78;
 let markHeight = 1.69;
@@ -145,3 +144,24 @@ johnBmi = johnMass / (johnHeight * johnHeight);
 console.log(markBmi, johnBmi);
 markHigherBMI = markBmi > johnBmi;
 console.log(markHigherBMI);
+
+const firstName = "john";
+const job = "student";
+const birthYear = 1991;
+const year = 2037;
+
+const john =
+"i'm " + firstName + ", a " + (year - birthYear) + " year old " + job + "!";
+console.log(john);
+
+const johnNew = `i'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+console.log(johnNew);
+console.log(`just a regular string`);
+
+console.log(`hey this is 
+how we can 
+use multi line 
+strings`);
+console.log("rather than \n of writting this \n stupid slash n ");
+
+*/
