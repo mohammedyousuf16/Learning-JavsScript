@@ -164,7 +164,6 @@ use multi line
 strings`);
 console.log("rather than \n of writting this \n stupid slash n ");
 
-*/
 
 const age = 19;
 
@@ -172,4 +171,19 @@ if (age >= 18) {
   console.log(`sarah can start driving now `);
 } else {
   console.log(`she has to wait for ${18 - age} years `);
+}
+
+*/
+const markMass = 95;
+const markHeight = 1.88;
+const johnHeight = 1.76;
+const johnMass = 85;
+markBmi = markMass / markHeight ** 2;
+johnBmi = johnMass / (johnHeight * johnHeight);
+markHigherBMI = markBmi > johnBmi;
+// console.log(markBmi, johnBmi, markHigherBMI);
+if (markBmi > johnBmi) {
+  console.log(`Mark's BMI ${markBmi} is higher than John's ${johnBmi}!`);
+} else {
+  console.log(`John's BMI ${johnBmi} is higher than Mark's ${markBmi}!`);
 }
