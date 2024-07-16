@@ -165,3 +165,11 @@ strings`);
 console.log("rather than \n of writting this \n stupid slash n ");
 
 */
+
+const age = 19;
+
+if (age >= 18) {
+  console.log(`sarah can start driving now `);
+} else {
+  console.log(`she has to wait for ${18 - age} years `);
+}
