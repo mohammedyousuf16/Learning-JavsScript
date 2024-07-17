@@ -302,49 +302,88 @@ console.log(!hasDriversLicense);
   § Data Bonus 1: Dolphins score 97, 112 and 101(310)(103.33). Koalas score 109, 95 and 123 (327)(109)
   § Data Bonus 2: Dolphins score 97, 112 and 101(310)(103.33). Koalas score 109, 95 and 106(310)(103.33)
   GOOD LUCK �
-  */
-
-// Challange 3
-// const oneDolphins = 96;
-// const twoDolphins = 108;
-// const thrDolphins = 89;
-// const oneKoalas = 88;
-// const twoKoalas = 91;
-// const thrKoalas = 110;
-
-// Bonus 1
-// const oneDolphins = 97;
-// const twoDolphins = 112;
-// const thrDolphins = 101;
-// const oneKoalas = 109;
-// const twoKoalas = 95;
-// const thrKoalas = 123;
-
-// BOnus 2
-const oneDolphins = 97;
-const twoDolphins = 112;
-const thrDolphins = 101;
-const oneKoalas = 109;
-const twoKoalas = 95;
-const thrKoalas = 106;
-
-const avgDolphins = (oneDolphins + twoDolphins + thrDolphins) / 3;
-const avgKoalas = (oneKoalas + twoKoalas + thrKoalas) / 3;
-console.log(
-  `the average of dolphins is ${avgDolphins} and average of koalas is ${avgKoalas}`
-);
-if (avgDolphins > 100 && avgKoalas < avgDolphins) {
+  
+  // Challange 3
+  // const oneDolphins = 96;
+  // const twoDolphins = 108;
+  // const thrDolphins = 89;
+  // const oneKoalas = 88;
+  // const twoKoalas = 91;
+  // const thrKoalas = 110;
+  
+  // Bonus 1
+  // const oneDolphins = 97;
+  // const twoDolphins = 112;
+  // const thrDolphins = 101;
+  // const oneKoalas = 109;
+  // const twoKoalas = 95;
+  // const thrKoalas = 123;
+  
+  // BOnus 2
+  const oneDolphins = 97;
+  const twoDolphins = 112;
+  const thrDolphins = 101;
+  const oneKoalas = 109;
+  const twoKoalas = 95;
+  const thrKoalas = 106;
+  
+  const avgDolphins = (oneDolphins + twoDolphins + thrDolphins) / 3;
+  const avgKoalas = (oneKoalas + twoKoalas + thrKoalas) / 3;
   console.log(
-    `DOlphins wins the competition with average score of ${avgDolphins}`
+    `the average of dolphins is ${avgDolphins} and average of koalas is ${avgKoalas}`
   );
-} else if (avgKoalas > 100 && avgKoalas > avgDolphins) {
-  console.log(`Koalas wins the competition with average score of ${avgKoalas}`);
-} else if (
-  avgDolphins === avgKoalas &&
-  avgDolphins >= 100 &&
-  avgKoalas >= 100
-) {
-  console.log("Both wins the trophy");
-} else {
-  console.log(`No one wins due to average is lesser than 100 points`);
+  if (avgDolphins > 100 && avgKoalas < avgDolphins) {
+    console.log(
+      `DOlphins wins the competition with average score of ${avgDolphins}`
+    );
+  } else if (avgKoalas > 100 && avgKoalas > avgDolphins) {
+    console.log(`Koalas wins the competition with average score of ${avgKoalas}`);
+  } else if (
+    avgDolphins === avgKoalas &&
+    avgDolphins >= 100 &&
+    avgKoalas >= 100
+  ) {
+    console.log("Both wins the trophy");
+  } else {
+    console.log(`No one wins due to average is lesser than 100 points`);
+}
+
+*/
+
+const day = "thurswday";
+
+switch (day) {
+  case "monday":
+    console.log("monday's plan course structure");
+    console.log("go to coding meetup");
+    break;
+  case "tuseday":
+    console.log("tuseday's plan theory videos");
+    break;
+  case "wednesday":
+  case "thursday":
+    console.log("write code examples");
+    break;
+  case "friday":
+    console.log("record videos");
+    break;
+  case "saturday":
+  case "sunday":
+    console.log("entertainment day or holiday");
+    break;
+  default:
+    console.log("write any weekday for the output");
+}
+
+if (day === "monday") {
+  console.log("monday's plan course structure");
+  console.log("go to coding meetup");
+} else if (day === "tuesday") {
+  console.log("tuseday's plan theory videos");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("write code examples");
+} else if (day === "friday") {
+  console.log("record videos");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("entertainment day or holiday");
 }
