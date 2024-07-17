@@ -348,7 +348,6 @@ console.log(!hasDriversLicense);
     console.log(`No one wins due to average is lesser than 100 points`);
 }
 
-*/
 
 const day = "thurswday";
 
@@ -357,33 +356,54 @@ switch (day) {
     console.log("monday's plan course structure");
     console.log("go to coding meetup");
     break;
-  case "tuseday":
-    console.log("tuseday's plan theory videos");
-    break;
-  case "wednesday":
-  case "thursday":
-    console.log("write code examples");
-    break;
-  case "friday":
-    console.log("record videos");
-    break;
-  case "saturday":
-  case "sunday":
-    console.log("entertainment day or holiday");
-    break;
-  default:
-    console.log("write any weekday for the output");
-}
-
-if (day === "monday") {
-  console.log("monday's plan course structure");
-  console.log("go to coding meetup");
-} else if (day === "tuesday") {
-  console.log("tuseday's plan theory videos");
-} else if (day === "wednesday" || day === "thursday") {
-  console.log("write code examples");
-} else if (day === "friday") {
-  console.log("record videos");
-} else if (day === "saturday" || day === "sunday") {
+    case "tuseday":
+      console.log("tuseday's plan theory videos");
+      break;
+      case "wednesday":
+        case "thursday":
+          console.log("write code examples");
+          break;
+          case "friday":
+            console.log("record videos");
+            break;
+            case "saturday":
+              case "sunday":
+                console.log("entertainment day or holiday");
+                break;
+                default:
+                  console.log("write any weekday for the output");
+                }
+                
+                if (day === "monday") {
+                  console.log("monday's plan course structure");
+                  console.log("go to coding meetup");
+                } else if (day === "tuesday") {
+                  console.log("tuseday's plan theory videos");
+                } else if (day === "wednesday" || day === "thursday") {
+                  console.log("write code examples");
+                } else if (day === "friday") {
+                  console.log("record videos");
+                } else if (day === "saturday" || day === "sunday") {
   console.log("entertainment day or holiday");
 }
+
+*/
+
+const age = 23;
+// age >= 18
+//   ? console.log("i like to drink wine")
+//   : console.log("i like to drink water");
+
+// Ternary Operator (The Conditional operator)
+const drink = age >= 18 ? "wine" : "water";
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+  drink2 = "wine";
+} else {
+  drink2 = "water";
+}
+console.log(drink2);
+
+console.log(`i love to drink ${age >= 18 ? "wine" : "water"}`);
