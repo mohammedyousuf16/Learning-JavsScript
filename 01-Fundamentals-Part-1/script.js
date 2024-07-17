@@ -107,7 +107,7 @@ console.log(ageJonas, ageSarah, averageAge);
 
 
 
-
+//Challange 1
 
 Mark and John are trying to compare their BMI (Body Mass Index), which is
 calculated using the formula:
@@ -173,6 +173,8 @@ if (age >= 18) {
   console.log(`she has to wait for ${18 - age} years `);
 }
 
+// Challange 2
+
 const markMass = 95;
 const markHeight = 1.88;
 const johnHeight = 1.76;
@@ -186,9 +188,9 @@ if (markBmi > johnBmi) {
 } else {
   console.log(`John's BMI ${johnBmi} is higher than Mark's ${markBmi}!`);
 }
-*/
 
 // Type convertion
+
 const inputYear = "1991";
 console.log(Number(inputYear), inputYear);
 console.log(Number(inputYear) + 18);
@@ -199,6 +201,7 @@ console.log(typeof NaN);
 console.log(String(23), 23);
 
 //Type coerction
+
 console.log("i'm " + 23 + " years old");
 console.log("i'm 23 years old");
 console.log("23" - "10" - 3);
@@ -208,3 +211,28 @@ console.log("10" / "2");
 let n = "1" + 1; //'11'
 n = n - 1; //'11'-1
 console.log(n);
+// Truthy and Falsy values
+
+//5 falsy values: 0, '', undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("john"));
+console.log(Boolean({}));
+console.log(Boolean(""));
+
+const money = 100;
+if (money) {
+  console.log("don't spend it all");
+} else {
+  console.log("you should get a job!");
+}
+
+let height = 0;
+if (height) {
+  console.log("YAY! height is defined");
+} else {
+  console.log("height is UNDEFINED");
+}
+
+*/
