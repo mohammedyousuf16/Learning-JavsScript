@@ -208,26 +208,36 @@ if (friends.includes("steven")) {
   console.log("you have a friend called steven");
 }
 
-*/
 //  Challange 2
 const bills = [125, 555, 44];
 const calcTip = function (bill) {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 };
 // function calcTip(bill) {
-//   if (bill >= 50 && bill <= 300) {
-//     tip = bill * 0.15;
+  //   if (bill >= 50 && bill <= 300) {
+    //     tip = bill * 0.15;
 //     tips.push(tip);
 //   } else {
-//     tip = bill * 0.2;
-//     tips.push(tip);
-//   }
-// }
-let tips = [
-  calcTip(bills[0]),
-  calcTip(bills[1]),
-  calcTip(bills[bills.length - 1]),
-];
-const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
-console.log(bills, tips);
-console.log(total);
+  //     tip = bill * 0.2;
+  //     tips.push(tip);
+  //   }
+  // }
+  let tips = [
+    calcTip(bills[0]),
+    calcTip(bills[1]),
+    calcTip(bills[bills.length - 1]),
+  ];
+  const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
+  console.log(bills, tips);
+  console.log(total);
+  
+*/
+
+// Intorduction to Objects
+const yousuf = {
+  firstName: "mohammed",
+  lastName: "yousuf",
+  age: 2037 - 1999,
+  job: "developer in IT",
+  friends: ["bob", "pop", "badass"],
+};
