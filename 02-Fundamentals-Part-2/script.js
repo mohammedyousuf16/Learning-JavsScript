@@ -137,7 +137,6 @@ console.log(
 );
 console.log(winner(avgScoreDolphins, avgScoreKoalas));
 
-*/
 
 const friends = ["michael", "steven", "peter"];
 console.log(friends);
@@ -171,3 +170,41 @@ const ages = [
   calcAge(years[years.length - 1]),
 ];
 console.log(ages);
+
+*/
+
+// Add elements to Array
+// 'push' adds elemensts at the end of an array
+// 'unshift' adds elements at the start of an array
+const friends = ["michael", "steven", "peter"];
+const newLength = friends.push("jay");
+console.log(friends);
+console.log(newLength);
+
+friends.unshift("john");
+console.log(friends);
+
+// Remove elements from an array
+// 'pop' removes elements from the end of an array
+// 'shift' removes elements from the starting of an array
+friends.pop();
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift();
+console.log(friends);
+
+// "indexOf" is an older method which gives the value of the element i.e (steven -1, michael-0, bob-(-1, due to it is not there in the arrya)) present in the array
+console.log(friends.indexOf("steven"));
+console.log(friends.indexOf("bob"));
+
+// "Includes" is the modern method and it is strict if you pass 23 as number and find it using the string value it will be false
+friends.push(23);
+console.log(friends.includes("steven"));
+console.log(friends.includes("bob"));
+console.log(friends.includes(23));
+
+if (friends.includes("steven")) {
+  console.log("you have a friend called steven");
+}
