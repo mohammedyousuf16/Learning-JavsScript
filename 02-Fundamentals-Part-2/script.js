@@ -231,13 +231,57 @@ const calcTip = function (bill) {
   console.log(bills, tips);
   console.log(total);
   
-*/
-
-// Intorduction to Objects
-const yousuf = {
+  
+  // Intorduction to Objects
+  const yousuf = {
+    firstName: "mohammed",
+    lastName: "yousuf",
+    age: 2037 - 1999,
+    job: "developer in IT",
+    friends: ["bob", "pop", "badass"],
+  };
+  
+  */
+const mohammed = {
   firstName: "mohammed",
   lastName: "yousuf",
   age: 2037 - 1999,
   job: "developer in IT",
   friends: ["bob", "pop", "badass"],
 };
+console.log(mohammed.lastName);
+console.log(mohammed["lastName"]);
+
+const nameKey = "Name";
+console.log(mohammed["first" + nameKey]);
+console.log(mohammed["last" + nameKey]);
+
+// this wont work with dot notation
+// console.log(mohammed."last" + nameKey)
+
+const intrestedIn = prompt(
+  "what do you want to know about mohammed choose between firstName, lastName, age, job, friends "
+);
+if (mohammed[intrestedIn]) {
+  console.log(mohammed[intrestedIn]);
+} else {
+  console.log("choose between firstName, lastName, age, job, friends");
+}
+
+mohammed.location = "india";
+mohammed["instagram"] = "mohammedyousuf16.md";
+
+//challange
+// "mohammed has 3 friends, and his best friend is bob"
+
+console.log(
+  mohammed.lastName +
+    " has " +
+    mohammed.friends.length +
+    " friends and his best friend is " +
+    mohammed.friends[0]
+);
+
+console.log(
+  `${mohammed.firstName} has ${mohammed.friends.length} friends and his best friend is ${mohammed.friends[0]}`
+);
