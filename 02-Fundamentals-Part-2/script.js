@@ -241,31 +241,30 @@ const calcTip = function (bill) {
     friends: ["bob", "pop", "badass"],
   };
   
-  */
-const mohammed = {
-  firstName: "mohammed",
-  lastName: "yousuf",
-  age: 2037 - 1999,
-  job: "developer in IT",
-  friends: ["bob", "pop", "badass"],
-};
-console.log(mohammed.lastName);
-console.log(mohammed["lastName"]);
-
-const nameKey = "Name";
-console.log(mohammed["first" + nameKey]);
-console.log(mohammed["last" + nameKey]);
-
-// this wont work with dot notation
-// console.log(mohammed."last" + nameKey)
-
-const intrestedIn = prompt(
-  "what do you want to know about mohammed choose between firstName, lastName, age, job, friends "
-);
-if (mohammed[intrestedIn]) {
-  console.log(mohammed[intrestedIn]);
-} else {
-  console.log("choose between firstName, lastName, age, job, friends");
+  const mohammed = {
+    firstName: "mohammed",
+    lastName: "yousuf",
+    age: 2037 - 1999,
+    job: "developer in IT",
+    friends: ["bob", "pop", "badass"],
+  };
+  console.log(mohammed.lastName);
+  console.log(mohammed["lastName"]);
+  
+  const nameKey = "Name";
+  console.log(mohammed["first" + nameKey]);
+  console.log(mohammed["last" + nameKey]);
+  
+  // this wont work with dot notation
+  // console.log(mohammed."last" + nameKey)
+  
+  const intrestedIn = prompt(
+    "what do you want to know about mohammed choose between firstName, lastName, age, job, friends "
+  );
+  if (mohammed[intrestedIn]) {
+    console.log(mohammed[intrestedIn]);
+  } else {
+    console.log("choose between firstName, lastName, age, job, friends");
 }
 
 mohammed.location = "india";
@@ -276,12 +275,52 @@ mohammed["instagram"] = "mohammedyousuf16.md";
 
 console.log(
   mohammed.lastName +
-    " has " +
-    mohammed.friends.length +
-    " friends and his best friend is " +
-    mohammed.friends[0]
+  " has " +
+  mohammed.friends.length +
+  " friends and his best friend is " +
+  mohammed.friends[0]
 );
 
 console.log(
   `${mohammed.firstName} has ${mohammed.friends.length} friends and his best friend is ${mohammed.friends[0]}`
 );
+
+*/
+
+const mohammed = {
+  firstName: "mohammed",
+  lastName: "yousuf",
+  birthYear: 1991,
+  job: "developer",
+  friends: ["bob", "pop", "badass"],
+  hasDriversLicense: true,
+  // calcAge: function (birthYear) {
+  //   return 2037 - birthYear;
+  // },
+
+  // calcAge: function () {
+  //   // console.log(this)
+  //   return 2037 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.lastName} is a ${this.calcAge()}-year old ${this.job}, and ${
+      this.hasDriversLicense ? "a" : "no"
+    } drivers license`;
+  },
+};
+
+console.log(`The age is ${mohammed.calcAge()}`);
+console.log(mohammed.age);
+console.log(mohammed.age);
+console.log(mohammed.age);
+
+// Challange
+// "mohammed is a 46-year old developer, and he has drivers license"
+
+console.log(mohammed.getSummary());
