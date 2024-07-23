@@ -285,7 +285,6 @@ console.log(
   `${mohammed.firstName} has ${mohammed.friends.length} friends and his best friend is ${mohammed.friends[0]}`
 );
 
-*/
 
 const mohammed = {
   firstName: "mohammed",
@@ -297,12 +296,12 @@ const mohammed = {
   // calcAge: function (birthYear) {
   //   return 2037 - birthYear;
   // },
-
+  
   // calcAge: function () {
-  //   // console.log(this)
+    //   console.log(this)
   //   return 2037 - this.birthYear;
   // },
-
+  
   calcAge: function () {
     this.age = 2037 - this.birthYear;
     return this.age;
@@ -324,3 +323,37 @@ console.log(mohammed.age);
 // "mohammed is a 46-year old developer, and he has drivers license"
 
 console.log(mohammed.getSummary());
+
+*/
+
+// Challange 3
+
+const mark = {
+  firstName: "mark",
+  lastName: "miller",
+  height: 1.69,
+  mass: 78,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+const john = {
+  firstName: "john",
+  lastName: "smith",
+  height: 1.95,
+  mass: 92,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+console.log(mark.calcBMI());
+console.log(john.calcBMI());
+console.log(
+  john.bmi > mark.bmi
+    ? `${john.firstName} ${john.lastName}'s bmi (${john.bmi}) is higher than ${mark.firstName} ${mark.lastName}'s bmi (${mark.bmi}) `
+    : `${mark.firstName} ${mark.lastName}'s bmi (${mark.bmi}) is higher than ${john.firstName} ${john.lastName}'s bmi (${john.bmi}) `
+);
