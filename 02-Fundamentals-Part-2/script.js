@@ -373,7 +373,6 @@ for (let rep = 0; rep <= 10; rep = rep + 2) {
   console.log(`lifting weight rep ${rep} `);
 }
 
-*/
 
 const yousuf = [
   "mohammed",
@@ -420,4 +419,25 @@ console.log("---break with number---");
 for (let i = 0; i < yousuf.length; i++) {
   if (typeof yousuf[i] === "number") break;
   console.log(yousuf[i], typeof yousuf[i]);
+}
+
+*/
+
+const yousuf = [
+  "mohammed",
+  "yousuf",
+  2037 - 1999,
+  "developer in IT",
+  ["bob", "pop", "badass"],
+];
+
+for (let i = yousuf.length - 1; i >= 0; i--) {
+  console.log(yousuf[i]);
+}
+
+for (let exe = 1; exe <= 3; exe++) {
+  console.log(`-----starting exercise ${exe} `);
+  for (let rep = 1; rep <= 5; rep++) {
+    console.log(`exercise ${exe}: ---rep ${rep}`);
+  }
 }
