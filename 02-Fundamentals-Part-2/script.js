@@ -357,7 +357,6 @@ console.log(
   : `${mark.firstName} ${mark.lastName}'s bmi (${mark.bmi}) is higher than ${john.firstName} ${john.lastName}'s bmi (${john.bmi}) `
 );
 
-*/
 // console.log("lifting weight rep 1");
 // console.log("lifting weight rep 2");
 // console.log("lifting weight rep 3");
@@ -372,4 +371,53 @@ console.log(
 // for loop keeps running until the condition is true
 for (let rep = 0; rep <= 10; rep = rep + 2) {
   console.log(`lifting weight rep ${rep} `);
+}
+
+*/
+
+const yousuf = [
+  "mohammed",
+  "yousuf",
+  2037 - 1999,
+  "developer in IT",
+  ["bob", "pop", "badass"],
+  true,
+];
+
+const types = [];
+// without for loop we have to write all the array numbers
+// console.log(yousuf[0])
+// console.log(yousuf[1])
+// ...
+// console.log(yousuf[4])
+
+// with for loop
+for (let i = 0; i < yousuf.length; i++) {
+  // reading from yousuf array
+  console.log(yousuf[i], typeof yousuf[i]);
+  // filling types array
+  // types[i] = typeof yousuf[i];
+  types.push(typeof yousuf[i]);
+}
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+// continue and break
+console.log("---only strings---");
+for (let i = 0; i < yousuf.length; i++) {
+  if (typeof yousuf[i] !== "string") continue;
+  console.log(yousuf[i], typeof yousuf[i]);
+}
+
+//  break
+console.log("---break with number---");
+for (let i = 0; i < yousuf.length; i++) {
+  if (typeof yousuf[i] === "number") break;
+  console.log(yousuf[i], typeof yousuf[i]);
 }
