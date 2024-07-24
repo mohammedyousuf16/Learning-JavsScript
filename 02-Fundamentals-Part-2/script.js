@@ -421,7 +421,6 @@ for (let i = 0; i < yousuf.length; i++) {
   console.log(yousuf[i], typeof yousuf[i]);
 }
 
-*/
 
 const yousuf = [
   "mohammed",
@@ -439,5 +438,25 @@ for (let exe = 1; exe <= 3; exe++) {
   console.log(`-----starting exercise ${exe} `);
   for (let rep = 1; rep <= 5; rep++) {
     console.log(`exercise ${exe}: ---rep ${rep}`);
+  }
+}
+
+*/
+
+// While loop
+let rep = 1;
+while (rep <= 1) {
+  // console.log(`this is i at ${rep}`);
+  rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+  console.log(`you rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) {
+    console.log(`you rolled ${dice} from if`);
   }
 }
