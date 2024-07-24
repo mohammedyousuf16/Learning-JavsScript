@@ -441,7 +441,6 @@ for (let exe = 1; exe <= 3; exe++) {
   }
 }
 
-*/
 
 // While loop
 let rep = 1;
@@ -460,3 +459,37 @@ while (dice !== 6) {
     console.log(`you rolled ${dice} from if`);
   }
 }
+
+*/
+
+//  Challange 4
+
+const Bill = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+let tips = [];
+let totals = [];
+
+const calcTips = function (Bills) {
+  return Bills >= 50 && Bills <= 300 ? Bills * 0.15 : Bills * 0.2;
+};
+// console.log(calcTips(Bill[2]));
+for (let i = 0; i <= Bill.length - 1; i++) {
+  const tip = calcTips(Bill[i]);
+  tips.push(tip);
+  totals.push(tip + Bill[i]);
+}
+// console.log(Bill, tips, totals);
+
+// const calcTip = function (bills) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// };
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i <= arr.length - 1; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
