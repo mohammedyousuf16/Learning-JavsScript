@@ -324,7 +324,6 @@ console.log(mohammed.age);
 
 console.log(mohammed.getSummary());
 
-*/
 
 // Challange 3
 
@@ -354,6 +353,23 @@ console.log(mark.calcBMI());
 console.log(john.calcBMI());
 console.log(
   john.bmi > mark.bmi
-    ? `${john.firstName} ${john.lastName}'s bmi (${john.bmi}) is higher than ${mark.firstName} ${mark.lastName}'s bmi (${mark.bmi}) `
-    : `${mark.firstName} ${mark.lastName}'s bmi (${mark.bmi}) is higher than ${john.firstName} ${john.lastName}'s bmi (${john.bmi}) `
+  ? `${john.firstName} ${john.lastName}'s bmi (${john.bmi}) is higher than ${mark.firstName} ${mark.lastName}'s bmi (${mark.bmi}) `
+  : `${mark.firstName} ${mark.lastName}'s bmi (${mark.bmi}) is higher than ${john.firstName} ${john.lastName}'s bmi (${john.bmi}) `
 );
+
+*/
+// console.log("lifting weight rep 1");
+// console.log("lifting weight rep 2");
+// console.log("lifting weight rep 3");
+// console.log("lifting weight rep 4");
+// console.log("lifting weight rep 5");
+// console.log("lifting weight rep 6");
+// console.log("lifting weight rep 7");
+// console.log("lifting weight rep 8");
+// console.log("lifting weight rep 9");
+// console.log("lifting weight rep 10");
+
+// for loop keeps running until the condition is true
+for (let rep = 0; rep <= 10; rep = rep + 2) {
+  console.log(`lifting weight rep ${rep} `);
+}
