@@ -1,6 +1,6 @@
 // Remember, we're gonna use strict mode in all scripts now!
 'use strict';
-
+/*
 const x = 23;
 // if (x === 23) console.log(23);
 
@@ -59,3 +59,20 @@ const amplitudeNew = calcTempAmplitudeNew(
   [3, 65, 8, 9, 3, 4]
 );
 console.log(amplitudeNew);
+*/
+
+const mesureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+    values: Number(prompt('degree celsius:')),
+  };
+  console.table(measurement);
+  // console.warn(measurement.values);
+  // console.error(measurement.values);
+
+  const kelvin = measurement.values + 273;
+  console.log(typeof kelvin);
+  return kelvin;
+};
+console.log(mesureKelvin());
