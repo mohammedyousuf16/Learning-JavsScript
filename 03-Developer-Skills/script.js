@@ -59,7 +59,6 @@ const amplitudeNew = calcTempAmplitudeNew(
   [3, 65, 8, 9, 3, 4]
 );
 console.log(amplitudeNew);
-*/
 
 const mesureKelvin = function () {
   const measurement = {
@@ -76,3 +75,18 @@ const mesureKelvin = function () {
   return kelvin;
 };
 console.log(mesureKelvin());
+
+*/
+
+// Challange 1
+const arr = [12, 5, -5, 0, 4];
+let str = '';
+const printForecast = function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    // console.log(`${arr[i]}ºC in ${i + 1} days`);
+    str += `${arr[i]}ºC in ${i + 1} days... `;
+    console.log(str);
+  }
+};
+printForecast(arr);
+console.log(str);
