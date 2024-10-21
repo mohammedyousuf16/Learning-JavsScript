@@ -111,7 +111,6 @@ matilda.calcAge();
 const f = jonas.calcAge;
 f();
 
-*/
 
 const jonas = {
   firstName: 'jonas',
@@ -119,40 +118,96 @@ const jonas = {
   calcAge: function () {
     // console.log(this);
     console.log(2037 - this.year);
-
+    
     // solution 1
     // const self = this; //self or that
     // const isMillenial = function () {
-    //   console.log(self);
-    //   console.log(self.year >= 1981 && self.year <= 1996);
-    //   // console.log(this.year >= 1981 && this.year <= 1996);
-    // };
-
-    //solution 2 (using the arrow function)
-    const self = this; //self or that
-    const isMillenial = () => {
+      //   console.log(self);
+      //   console.log(self.year >= 1981 && self.year <= 1996);
+      //   // console.log(this.year >= 1981 && this.year <= 1996);
+      // };
+      
+      //solution 2 (using the arrow function)
+      const self = this; //self or that
+      const isMillenial = () => {
+        console.log(this);
+        console.log(this.year >= 1981 && this.year <= 1996);
+      };
+      isMillenial();
+    },
+    greet: () => {
       console.log(this);
-      console.log(this.year >= 1981 && this.year <= 1996);
-    };
-    isMillenial();
-  },
-  greet: () => {
-    console.log(this);
-    console.log(`hey ${this.firstName}`);
-  },
-};
-jonas.greet();
-jonas.calcAge();
+      console.log(`hey ${this.firstName}`);
+    },
+  };
+  jonas.greet();
+  jonas.calcAge();
+  
+  // arguments keyword
+  const addExpr = function (a, b) {
+    console.log(arguments);
+    return a + b;
+  };
+  addExpr(2, 5);
+  addExpr(2, 5, 8, 10);
+  var addArrow = (a, b) => {
+    console.log(arguments);
+    return a + b;
+  };
+  // addArrow(2, 5, 8);
+  
+  */
 
-// arguments keyword
-const addExpr = function (a, b) {
-  console.log(arguments);
-  return a + b;
+let age = 30;
+let oldage = age;
+age = 31;
+console.log(age, oldage);
+
+const me = {
+  name: 'james',
+  age: 30,
 };
-addExpr(2, 5);
-addExpr(2, 5, 8, 10);
-var addArrow = (a, b) => {
-  console.log(arguments);
-  return a + b;
+
+const friends = me;
+friends.age = 27;
+console.log('friend:', friends);
+console.log('me', me);
+
+//Primitive vs object in practice
+
+// Primitive types
+let lastName = 'williams';
+let oldLastName = lastName;
+lastName = 'davids';
+console.log(lastName, oldLastName);
+
+// Reference types
+const jessica = {
+  firstName: 'jessica',
+  lastName: 'williams',
+  age: 27,
 };
-// addArrow(2, 5, 8);
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davids';
+console.log(jessica, marriedJessica);
+
+// marriedJessica = {};
+
+// Copying Objects
+const jessica2 = {
+  firstName: 'jessica',
+  lastName: 'williams',
+  age: 27,
+  family: ['alice', 'bob'],
+};
+// Object.assign() function just shallow copy not deep copy(obj inside obj)
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davids';
+console.log('Before marrage', jessica2);
+console.log('after marrage ', jessicaCopy);
+
+jessicaCopy.family.push('marry');
+jessicaCopy.family.push('john');
+
+console.log('Before marrage', jessica2);
+console.log('after marrage ', jessicaCopy);
