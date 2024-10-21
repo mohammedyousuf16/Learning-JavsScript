@@ -33,7 +33,6 @@ const firstName = 'mohammed';
 calcAge(1991);
 //console.log(age);
 //printAge();
-*/
 
 //hosting in practice
 
@@ -77,3 +76,38 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
+*/
+
+//this keyword in global scope
+console.log(this);
+//this keyword in funtion
+const calcAge = function (birthYear) {
+  console.log(2037 - birthYear);
+  console.log(this);
+};
+calcAge(1991);
+
+//this keyword in arrow funtion(Arrow function does not has this keyword but uses the this key word from the parent {in here its the global this which points to window})
+const calcAgeArrow = birthYear => {
+  console.log(2037 - birthYear);
+  // console.log(this);
+};
+calcAgeArrow(1980);
+
+const jonas = {
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+};
+jonas.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+matilda.calcAge = jonas.calcAge;
+matilda.calcAge();
+
+const f = jonas.calcAge;
+f();
