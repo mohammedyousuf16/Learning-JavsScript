@@ -76,7 +76,6 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
-*/
 
 //this keyword in global scope
 console.log(this);
@@ -111,3 +110,49 @@ matilda.calcAge();
 
 const f = jonas.calcAge;
 f();
+
+*/
+
+const jonas = {
+  firstName: 'jonas',
+  year: 1991,
+  calcAge: function () {
+    // console.log(this);
+    console.log(2037 - this.year);
+
+    // solution 1
+    // const self = this; //self or that
+    // const isMillenial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    //   // console.log(this.year >= 1981 && this.year <= 1996);
+    // };
+
+    //solution 2 (using the arrow function)
+    const self = this; //self or that
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
+  },
+  greet: () => {
+    console.log(this);
+    console.log(`hey ${this.firstName}`);
+  },
+};
+jonas.greet();
+jonas.calcAge();
+
+// arguments keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpr(2, 5);
+addExpr(2, 5, 8, 10);
+var addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+// addArrow(2, 5, 8);
