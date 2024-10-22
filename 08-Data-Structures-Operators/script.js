@@ -45,6 +45,34 @@ const restaurant = {
     console.log(mainIngredians, otherIngrediants);
   },
 };
+// Use any data type, return any data type,shor-circuiting
+
+console.log('-----OR-----');
+console.log(3 || 'james');
+console.log('' || 'james');
+console.log(true || 0);
+console.log(undefined || null);
+console.log(undefined || 0 || '' || 'hello' || 3 || null);
+//OR will not work when the numGuest is 0 it will show 10
+restaurant.numGuests = 23;
+const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guest1);
+
+const guest2 = restaurant.numGuests || 10;
+console.log(guest2);
+
+console.log('-----AND-----');
+console.log(0 && 'jonas');
+console.log(1 && 'jonas');
+
+console.log('hello' && 23 && null && 'jonas');
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushroom', 'spinish');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('ing1', 'ing2', 'ing3');
+/*
 // 1)Destructuring
 
 // SPREAD, because on Right side of = (assignment operator)
@@ -78,7 +106,6 @@ add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
-/*
           const arr = [7, 8, 9];
 const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
 console.log(badNewArr);
