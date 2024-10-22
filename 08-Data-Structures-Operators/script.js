@@ -38,8 +38,55 @@ const restaurant = {
       `order received ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be deleverd to ${address} at ${time}`
     );
   },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`here is pasta with ${ing1},${ing2},${ing3}`);
+  },
 };
 
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+// copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+// join 2 arrays
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menu);
+
+// Iterables: arrays, strings, maps, sets. Not objects
+const str = 'jonas';
+const lettes = [...str, '', 'S.'];
+console.log(lettes);
+console.log(...str);
+//realworld example
+const ingridiants = [
+  // prompt("let's make pasta! Ingridiant 1?"),
+  // prompt("let's make pasta! Ingridiant 2?"),
+  // prompt("let's make pasta! Ingridiant 3?"),
+];
+// console.log(ingridiants);
+
+// restaurant.orderPasta(...ingridiants);
+//objects with spread
+const newRestaurant = { foundIn: 1998, ...restaurant, founder: 'mohammed' };
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurant.name);
+console.log(restaurantCopy.name);
+
+/*
+//destructing objects
 restaurant.orderDelivery({
   time: '22:30',
   address: 'vitamin address',
@@ -89,7 +136,6 @@ console.log(o, c);
 /////////////////
 ////////////////////////
 ////////////////////////////
-/*
 const arr = [2, 3, 4];
 const a = arr[0];
 const b = arr[1];
