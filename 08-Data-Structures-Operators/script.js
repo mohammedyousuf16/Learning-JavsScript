@@ -41,9 +41,45 @@ const restaurant = {
   orderPasta: function (ing1, ing2, ing3) {
     console.log(`here is pasta with ${ing1},${ing2},${ing3}`);
   },
+  orderPizza: function (mainIngredians, ...otherIngrediants) {
+    console.log(mainIngredians, otherIngrediants);
+  },
 };
+// 1)Destructuring
 
-const arr = [7, 8, 9];
+// SPREAD, because on Right side of = (assignment operator)
+const arr = [1, 2, ...[3, 4]];
+//REST, because on Left side of = (assignment operator)
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
+// REST inobjects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(sat, weekdays);
+// 2) Functions
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+};
+add(2, 3);
+add(2, 3, 5, 7);
+add(2, 3, 5, 6, 8, 9);
+
+const x = [23, 10, 10];
+add(...x);
+
+restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+restaurant.orderPizza('mushrooms');
+/*
+          const arr = [7, 8, 9];
 const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
 console.log(badNewArr);
 
@@ -85,7 +121,6 @@ restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurant.name);
 console.log(restaurantCopy.name);
 
-/*
 //destructing objects
 restaurant.orderDelivery({
   time: '22:30',
