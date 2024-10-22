@@ -45,8 +45,17 @@ const restaurant = {
     console.log(mainIngredians, otherIngrediants);
   },
 };
-// Use any data type, return any data type,shor-circuiting
 
+restaurant.numGuests = 0;
+const guest = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guest);
+//Nullish: null and undefined [NOT 0 or '']
+const guessCorrect = restaurant.numGuests ?? 10;
+console.log(guessCorrect);
+
+/*
+// Use any data type, return any data type,shor-circuiting
+      
 console.log('-----OR-----');
 console.log(3 || 'james');
 console.log('' || 'james');
@@ -72,7 +81,6 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza('ing1', 'ing2', 'ing3');
-/*
 // 1)Destructuring
 
 // SPREAD, because on Right side of = (assignment operator)
