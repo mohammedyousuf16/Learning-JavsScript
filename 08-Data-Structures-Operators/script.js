@@ -45,8 +45,10 @@ const restaurant = {
     console.log(mainIngredians, otherIngrediants);
   },
 };
-const rest1 = {
-  name: 'capri',
+
+/*
+      const rest1 = {
+        name: 'capri',
   // numGuest: 20,
   numGuest: 0,
 };
@@ -75,7 +77,6 @@ rest2.numGuest ??= 10;
 rest1.owner &&= '<Anonymos>';
 rest2.owner &&= '<Anonymos>';
 console.log(rest1, rest2);
-/*
 restaurant.numGuests = 0;
 const guest = restaurant.numGuests ? restaurant.numGuests : 10;
 console.log(guest);
@@ -273,7 +274,6 @@ console.log(i, j, k);
 // Default values
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);
-*/
 
 // Coding Challenge #1
 // We're building a football betting app (soccer for my American friends �)!
@@ -301,3 +301,70 @@ console.log(p, q, r);
 // operator.
 // Test data for 6.: First, use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'.
 // Then, call the function again with players from game.scored
+*/
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 11.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+
+const [players1, players2] = game.players;
+console.log(players1, players2);
+
+const [gk, ...fieldPlayers] = players1;
+console.log(gk, fieldPlayers);
+
+const allplayers = [...players1, ...players2];
+console.log(allplayers);
+
+const players1Final = [...players1, 'Thiago', 'couthinho', 'periscic'];
+
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
+console.log(draw, team1, team2);
+
+const printGoals = function (...players) {
+  console.log(`${players.length} goals were scored`);
+};
+printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+printGoals('Davies', 'Muller');
+printGoals(...game.score);
+
+team1 < team2 && console.log('team 1 is more likely to win');
+team2 < team1 && console.log('team 2 is more likely to win');
