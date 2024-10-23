@@ -5,6 +5,24 @@ const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 // Data needed for first part of the section
+
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+const hours = {
+  [weekdays[3]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays[4]]: {
+    open: 11,
+    close: 23,
+  },
+  [`${weekdays[2 + 3]}`]: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
+
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -14,37 +32,25 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
-  orderDelivery: function ({
-    starterIndex = 1,
-    mainIndex = 0,
-    address,
-    time = '20:00',
-  }) {
+  //old method to add befor es6
+  // openingHours: openingHours,
+
+  // es6 enhanced object literals
+  hours,
+  orderDelivery({ starterIndex = 1, mainIndex = 0, address, time = '20:00' }) {
     console.log(
       `order received ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be deleverd to ${address} at ${time}`
     );
   },
-  orderPasta: function (ing1, ing2, ing3) {
+  orderPasta(ing1, ing2, ing3) {
     console.log(`here is pasta with ${ing1},${ing2},${ing3}`);
   },
   orderPizza: function (mainIngredians, ...otherIngrediants) {
     console.log(mainIngredians, otherIngrediants);
   },
 };
+
+/*
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 // for (const item of menu) console.log(item);
@@ -53,7 +59,7 @@ for (const [i, el] of menu.entries()) {
   console.log(`${i + 1} ${el}`);
 }
 // console.log([...menu.entries()]);
-/*
+
 const rest1 = {
 name: 'capri',
 // numGuest: 20,
