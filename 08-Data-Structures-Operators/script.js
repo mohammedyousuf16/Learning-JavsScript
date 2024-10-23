@@ -45,11 +45,18 @@ const restaurant = {
     console.log(mainIngredians, otherIngrediants);
   },
 };
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
+// for (const item of menu) console.log(item);
+for (const [i, el] of menu.entries()) {
+  // console.log(`${itme[0] + 1} ${itme[1]}`);
+  console.log(`${i + 1} ${el}`);
+}
+// console.log([...menu.entries()]);
 /*
-      const rest1 = {
-        name: 'capri',
-  // numGuest: 20,
+const rest1 = {
+name: 'capri',
+// numGuest: 20,
   numGuest: 0,
 };
 
@@ -301,7 +308,7 @@ console.log(p, q, r);
 // operator.
 // Test data for 6.: First, use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'.
 // Then, call the function again with players from game.scored
-*/
+
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -368,3 +375,4 @@ printGoals(...game.score);
 
 team1 < team2 && console.log('team 1 is more likely to win');
 team2 < team1 && console.log('team 2 is more likely to win');
+*/
