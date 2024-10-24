@@ -32,6 +32,7 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
   //old method to add befor es6
   // openingHours: openingHours,
 
@@ -49,6 +50,27 @@ const restaurant = {
     console.log(mainIngredians, otherIngrediants);
   },
 };
+
+// propertiy names
+const properties = Object.keys(openingHours);
+console.log(properties);
+let openStr = `we are open on ${properties.length} days `;
+for (const day of properties) {
+  openStr += `${day}, `;
+}
+console.log(openStr);
+
+//proprety values
+const values = Object.values(openingHours);
+console.log(values);
+//Entire Object
+const entries = Object.entries(openingHours);
+console.log(entries);
+
+for (const [day, { open, close }] of entries) {
+  console.log(`On ${day} we open at ${open} and close at ${close}`);
+}
+/*
 if (restaurant.openingHours && restaurant.openingHours.mon)
   console.log(restaurant.openingHours.mon.open);
 // without optional chaining we will get error
@@ -72,7 +94,7 @@ console.log(restaurant.ordezr?.(0, 1) ?? 'method does not exists');
 // Array
 const users = [{ name: 'james', email: 'jamesbond@gmail.com' }];
 console.log(users[0]?.name ?? 'user array empty');
-/*
+
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 // for (const item of menu) console.log(item);
