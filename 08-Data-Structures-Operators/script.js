@@ -50,6 +50,48 @@ const restaurant = {
     console.log(mainIngredians, otherIngrediants);
   },
 };
+
+const airline = 'Tap Air portugal';
+const plane = 'A320';
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B737'[0]);
+
+console.log('B737'.length);
+console.log(airline.length);
+
+console.log(airline.indexOf('r'));
+console.log(airline.indexOf('portugal'));
+console.log(airline.lastIndexOf('r'));
+
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+const checkMidSeat = function (seat) {
+  // B and E are middle seats
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') {
+    console.log('you got mid seat');
+  } else {
+    console.log('you got luckey');
+  }
+};
+checkMidSeat('11B');
+checkMidSeat('13A');
+checkMidSeat('43C');
+checkMidSeat('63D');
+checkMidSeat('34E');
+
+console.log(new String('james'));
+console.log(typeof new String('james'));
+
 /*
 const question = new Map([
   ['question', 'what is the best programming language in the world ?'],
@@ -608,7 +650,7 @@ const gameEvents = new Map([
   [80, '⚽ GOAL'],
   [92, '� Yellow card'],
 ]);
-
+/*
 // 1.
 const event = [...new Set(gameEvents.values())];
 console.log(event);
@@ -634,3 +676,4 @@ for (const [key, value] of gameEvents) {
     console.log(`Second Half: ${key}: ${value}`);
   }
 }
+*/
