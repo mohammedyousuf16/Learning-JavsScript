@@ -52,6 +52,66 @@ const restaurant = {
 };
 
 const airline = 'Tap Air portugal';
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+// fix capitalization in name
+const passenger = 'jAmes'; // James
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+// comparing email
+const email = 'hello@jonas.io';
+const loginEmail = '   Hello@Jonas.Io \n';
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+// console.log(trimmedEmail);
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+console.log(email === normalizedEmail);
+
+// Replacing parts of string
+
+const priceGB = '288,97@';
+const priceUS = priceGB.replace('@', '$').replace(',', '.');
+console.log(priceUS);
+
+const announcement =
+  'All passanger come to boarding door 23. Boarding door 23!';
+console.log(announcement.replace('door', 'gate'));
+console.log(announcement.replaceAll('door', 'gate'));
+
+console.log(announcement.replace(/door/g, 'gate'));
+
+// Booleans
+
+const plane = 'Airbus A320neo';
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing'));
+console.log(plane.startsWith('Airb'));
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of the new Airbus family');
+}
+// Practice Excersise
+const checkBaggage = function (item) {
+  const baggage = item.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('you are NOT allowed ');
+  } else {
+    console.log('welcome aboard!');
+  }
+};
+checkBaggage('i have a laptop, some Food and a pocket Knife');
+checkBaggage('i have some clothes, shoes and laptop');
+checkBaggage('Got some snacks and a gun for protection');
+/*
+// Working with strings
+const airline = 'Tap Air portugal';
 const plane = 'A320';
 console.log(plane[0]);
 console.log(plane[1]);
@@ -92,7 +152,7 @@ checkMidSeat('34E');
 console.log(new String('james'));
 console.log(typeof new String('james'));
 
-/*
+
 const question = new Map([
   ['question', 'what is the best programming language in the world ?'],
   [1, 'c'],
